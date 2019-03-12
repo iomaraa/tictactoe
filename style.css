@@ -1,0 +1,177 @@
+html, body {
+    margin:  auto;
+
+    }
+
+body {
+    background-color: #EFF6E0;
+    }
+header{
+    background-color: #01161E;
+    
+}
+
+h1{
+    text-align: center;
+    color: #EFF6E0;
+    margin: 0;
+    padding: 10px;
+}
+
+h2{
+    color: #124559;
+    align-self: center;
+    margin: inherit;
+}
+main{
+    display: flex;
+    width: 50%;
+    background-color: #598392;
+    margin: 30px auto;
+    border-radius: 10px;
+    user-select: none;
+    justify-content: center;
+}
+
+.mid{
+    order: 2;
+    
+    
+    
+}
+
+.p1{
+    background-color: #EFF6E0;
+    margin: 10px;  
+    border-radius: 10px;
+    padding: 0 5px;
+    order: 1;
+    height: 50px;
+    text-align: center;
+}
+
+.p2{
+    background-color: #EFF6E0;
+    margin: 10px;  
+    border-radius: 10px;
+    padding: 0 5px;
+    order: 3;
+    height: 50px;
+    text-align: center;
+}
+
+.score1{
+    background-color: #EFF6E0;
+    margin: 10px;  
+    border-radius: 10px;
+    padding: 0 5px;
+    flex:1;
+    order: 1;
+    text-align: center;
+    margin: 20px;
+    color: #124559;
+    align-self: center;
+    font-size: 30px;
+    font-weight: bold;
+   
+}
+
+.score2{
+    background-color: #EFF6E0;
+    margin: 10px;  
+    border-radius: 10px;
+    padding: 0 5px;
+    flex:1;
+    order: 1;
+    text-align: center;
+    margin: 20px;
+    color: #124559;
+    align-self: center;
+    font-size: 30px;
+    font-weight: bold;
+   
+}
+
+
+
+.container{ 
+    display: grid ;
+    grid-template-columns: 125px 125px 125px; 
+    grid-gap: 10px;
+    background-color:#598392;   
+    border-radius: 2px;
+    order: 2;
+    justify-content: center;
+}
+
+.container > div{
+    margin: 0px;
+    height: 100px;
+    text-align: center;
+    background-color: #01161E;
+    border-radius: 10px;
+    color: #EFF6E0;
+    font-size: 60px; 
+    align-items: center;
+    padding: 20px  0 0 0;
+}
+
+.btn{
+    height: 30px;
+    margin: 40px;
+    align-self: center;
+
+}
+
+.btnNGame{
+    
+    text-align: center;
+    background-color: #01161E;
+    border-radius: 10px;
+    color: #EFF6E0;
+    width: 125px;
+    
+    
+    
+    
+}
+
+.gameStatus{
+    background-color: #EFF6E0;
+    margin: 10px;  
+    border-radius: 10px;
+    padding: 0 5px;
+    text-align: center;
+    width: 380px;
+    
+}
+
+footer{
+    background-color: #01161E;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
