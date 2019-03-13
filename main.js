@@ -25,6 +25,7 @@ var pMove = function () {
          changeP()
          win()
          tie()
+       
 
       }
    })
@@ -86,5 +87,6 @@ function tie() {
    }
    if(num >8){
    swal("It's a Tie, Play Again"); 
+   newGame()
 }
 }
