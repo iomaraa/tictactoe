@@ -1,29 +1,28 @@
 # Project title
 tictactoe
 
-##Screenshot
-![alt text](https://imgur.com/a/rxc1SxT)
+# Screenshot
+![img](https://imgur.com/a/rxc1SxT)
 
-
-##Prerequisites
+# Prerequisites
 N/A
 
-##Features
+# Features
 1v1 tic tac toe
 stupid AI
 
-##Build status
+# Build status
 missing more sophisticated AI
 
-##Built With 
+# Built With 
 HTML
 JavaScript
 CSS
 
-##Authors 
+# Authors 
 Omar AlArifi
 
-##How to use?
+# How to use?
 its tic tac toe, have fun
 
 ##Acknowledgments
