@@ -1,6 +1,5 @@
-html, body {
+html, body{
     margin:  auto;
-
     }
 
 body {
@@ -10,7 +9,14 @@ header{
     background-color: #01161E;
     
 }
+.midsec{
+    order: 2;
+}
 
+.pic{
+    height: 20;
+    width: 40;
+}
 h1{
     text-align: center;
     color: #EFF6E0;
@@ -25,12 +31,13 @@ h2{
 }
 main{
     display: flex;
-    width: 50%;
+    width: 73%;
     background-color: #598392;
     margin: 30px auto;
     border-radius: 10px;
     user-select: none;
     justify-content: center;
+    align-items: center;
 }
 
 .mid{
@@ -40,7 +47,7 @@ main{
     
 }
 
-.p1{
+.PVP{
     background-color: #EFF6E0;
     margin: 10px;  
     border-radius: 10px;
@@ -48,9 +55,10 @@ main{
     order: 1;
     height: 50px;
     text-align: center;
+    width: 250px;
 }
 
-.p2{
+.PVE{
     background-color: #EFF6E0;
     margin: 10px;  
     border-radius: 10px;
@@ -58,6 +66,7 @@ main{
     order: 3;
     height: 50px;
     text-align: center;
+    width: 250px;
 }
 
 .score1{
@@ -73,7 +82,6 @@ main{
     align-self: center;
     font-size: 30px;
     font-weight: bold;
-   
 }
 
 .score2{
@@ -89,7 +97,6 @@ main{
     align-self: center;
     font-size: 30px;
     font-weight: bold;
-   
 }
 
 
@@ -153,7 +160,11 @@ footer{
     position: fixed;
     bottom: 0;
     }
+a{
+    text-decoration: none;
+    color: #124559;
 
+}
 
 
 

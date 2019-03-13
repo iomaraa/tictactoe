@@ -1,19 +1,36 @@
 
 
 var playerTurn = "X"
+var p1score = 0
+var p2score = 0
+
+//Winning Combanations
+var winComb = [
+   [1, 2, 3],
+   [4, 5, 6],
+   [7, 8, 9],
+   [1, 4, 7],
+   [1, 5, 9],
+   [3, 5, 7],
+   [2, 5, 8],
+   [3, 6, 9]
+]
 
 
-
+//Prints 'X' or 'O'
 var pMove = function () {
    $('.container').on('click', function () {
       if ($(event.target).text() == '') {
          $(event.target).text(playerTurn);
          changeP()
          win()
+         tie()
+
       }
    })
 }
 
+//Function for changing turns
 pMove();
 function changeP() {
    if (playerTurn == "X") {
@@ -23,54 +40,51 @@ function changeP() {
    }
 }
 
+//calculating Score
+var score1 = 0
+var score2 = 0
+
+//function to check winner
 function win() {
-   if ($('.box1').text() == 'X' && $('.box2').text() == 'X' && $('.box3').text() == 'X' ||
-      $('.box4').text() == 'X' && $('.box5').text() == 'X' && $('.box6').text() == 'X' ||
-      $('.box7').text() == 'X' && $('.box8').text() == 'X' && $('.box9').text() == 'X' ||
-      $('.box1').text() == 'X' && $('.box4').text() == 'X' && $('.box7').text() == 'X' ||
-      $('.box2').text() == 'X' && $('.box5').text() == 'X' && $('.box8').text() == 'X' ||
-      $('.box3').text() == 'X' && $('.box6').text() == 'X' && $('.box9').text() == 'X' ||
-      $('.box3').text() == 'X' && $('.box5').text() == 'X' && $('.box7').text() == 'X' ||
-      $('.box1').text() == 'X' && $('.box5').text() == 'X' && $('.box9').text() == 'X'
-   ) {
-      $('.gameStatus').text('Player 1 Won the Game')
-   } else if ($('.box1').text() == 'O' && $('.box2').text() == 'O' && $('.box3').text() == 'O' ||
-      $('.box4').text() == 'O' && $('.box5').text() == 'O' && $('.box6').text() == 'O' ||
-      $('.box7').text() == 'O' && $('.box8').text() == 'O' && $('.box9').text() == 'O' ||
-      $('.box1').text() == 'O' && $('.box4').text() == 'O' && $('.box7').text() == 'O' ||
-      $('.box2').text() == 'O' && $('.box5').text() == 'O' && $('.box8').text() == 'O' ||
-      $('.box3').text() == 'O' && $('.box6').text() == 'O' && $('.box9').text() == 'O' ||
-      $('.box3').text() == 'O' && $('.box5').text() == 'O' && $('.box7').text() == 'O' ||
-      $('.box1').text() == 'O' && $('.box5').text() == 'O' && $('.box9').text() == 'O') {
-      $('.gameStatus').text('Player 2 Won the Game')
-   } else{
-      $('.gameStatus').text('its a TIE you idiots')
+   for (var i = 0; i < winComb.length; i++) {
+      if ($('.box' + winComb[i][0]).text() == 'X' && $('.box' + winComb[i][1]).text() == 'X' && $('.box' + winComb[i][2]).text() == 'X') {
+         swal("Player 1 Won the Round");
+         score1++
+         $('.score1').text(score1)
+         newGame()
+      } else if ($('.box' + winComb[i][0]).text() == 'O' && $('.box' + winComb[i][1]).text() == 'O' && $('.box' + winComb[i][2]).text() == 'O') {
+         swal("Player 2 Won the Round");
+         score2++
+         $('.score2').text(score2)
+         newGame()
+      }
    }
 }
 
 
 
 
-
-
+//starts a new game
 function newGame() {
-   $('.btnNGame').on('click', function () {
-      playerTurn = 'X'
-      for (var i = 1; i <= 9; i++) {
-         $('.box' + i).text('')
-      }
-   })
+   for (var i = 1; i <= 9; i++) {
+      $('.box' + i).text('')
+   }
 }
 
+//reloads the page 
+$('.btnNGame').click(function () {
+   location.reload();
+});
 
-newGame()
-var i = 0
-var j = 0
-var t =0
-
-if (i && t && j == 0) {
-console.log("hi")
-} else {
-   console.log("hello");
-   
+//Check for draw
+function tie() {
+   var num = 0;
+   for (var i = 1; i < 10; i++) {
+      if ($('.box' + i).text() == 'X' || $('.box' + i).text() == 'O') {
+         num++
+      }
+   }
+   if(num >8){
+   swal("It's a Tie, Play Again"); 
+}
 }
